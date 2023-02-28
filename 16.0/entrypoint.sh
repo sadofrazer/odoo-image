@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+stat /var/lib/odoo/filestore || mv -n /opt/odoo /var/lib
 
 if [ -v PASSWORD_FILE ]; then
     PASSWORD="$(< $PASSWORD_FILE)"
